@@ -2,4 +2,7 @@
 */
 !.gitignore
 !.travis.yml
-!git_deploy_key.enc
+!package.json
+!package-lock.json
+!.releaserc.json
+!commitlint.config.js

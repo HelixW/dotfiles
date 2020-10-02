@@ -1,0 +1,61 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.0-development",
+  "description": "All system config files which have been modified for my current Arch build.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelixW/dotfiles.git"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [
+    "dotfiles",
+    "config",
+    "arch",
+    "manjaro",
+    "arcolinux",
+    "linux",
+    "shell",
+    "zsh"
+  ],
+  "author": "HelixW <shreyas.2000@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HelixW/dotfiles/issues"
+  },
+  "homepage": "https://github.com/HelixW/dotfiles",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "git-cz": "^4.7.1",
+    "husky": "^4.3.0",
+    "semantic-release": "^17.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "@semantic-release/github"
+  ]
+}

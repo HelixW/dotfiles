@@ -1,31 +1,15 @@
-language: go
+language: node_js
 
-go:
-  - 1.6
-  - 1.7
+node_js:
+  - 12.x
 
 jobs:
   include:
     - stage: release
-      before_install:
-        # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
-        - openssl aes-256-cbc -K $encrypted_bea0181439c1_key -iv $encrypted_bea0181439c1_iv -in git_deploy_key.enc -out git_deploy_key -d
-        # Make sure only the current user can read the private key
-        - chmod 600 /tmp/git_deploy_key
-        # Create a script to return the passphrase environment variable to ssh-add
-        - echo 'echo ${SSH_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
-        # Start the authentication agent
-        - eval "$(ssh-agent -s)"
-        # Add the key to the authentication agent
-        - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
+      node_js: lts/*
+      script: skip
       deploy:
         provider: script
         skip_cleanup: true
         script:
-          # Use nvm to install and use the Node LTS version (nvm is installed on all Travis images)
-          - nvm install lts/*
-          # Bump package version
           - npx semantic-release
-        github_token: $GITHUB_TOKEN
-        on:
-          branch: master
