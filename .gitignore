@@ -19,3 +19,14 @@ etc/*
 !etc/default
 etc/default/*
 !etc/default/grub
+
+# Zsh
+!home
+home/*
+!home/helix
+home/helix/*
+!home/helix/.zshrc
+
+# Xorg
+!home/helix/.xinitrc
+!home/helix/.xsession
