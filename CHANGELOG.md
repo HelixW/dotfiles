@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/HelixW/dotfiles/compare/v1.1.1...v1.2.0) (2020-10-03)
+
+
+### Features
+
+* 🎸 Added .zshrc file ([#9](https://github.com/HelixW/dotfiles/issues/9)) ([7f5181a](https://github.com/HelixW/dotfiles/commit/7f5181a0554ca674daeea15d033c16b9036e8744)), closes [#5](https://github.com/HelixW/dotfiles/issues/5)
+
 ## [1.1.1](https://github.com/HelixW/dotfiles/compare/v1.1.0...v1.1.1) (2020-10-03)
 
 
