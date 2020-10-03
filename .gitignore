@@ -1,8 +1,21 @@
+# Ignore all files and directories
 *
-*/
+
+# Unignore gitignore
 !.gitignore
+
+# CI Config
 !.travis.yml
+
+# Semantic Release, Commitizen and Commitlint
 !package.json
 !package-lock.json
 !.releaserc.json
 !commitlint.config.js
+
+# Grub Config
+!etc
+etc/*
+!etc/default
+etc/default/*
+!etc/default/grub
