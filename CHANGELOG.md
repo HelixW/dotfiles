@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/HelixW/dotfiles/compare/v1.0.0...v1.1.0) (2020-10-03)
+
+
+### Features
+
+* 🎸 Added grub config ([#4](https://github.com/HelixW/dotfiles/issues/4)) ([dc3be12](https://github.com/HelixW/dotfiles/commit/dc3be12029dd7c1faa433d5a3670869746e336f6)), closes [#1](https://github.com/HelixW/dotfiles/issues/1)
+
 # 1.0.0 (2020-10-02)
 
 
