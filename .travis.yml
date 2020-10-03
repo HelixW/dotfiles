@@ -11,8 +11,7 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        branches:
-          only:
-            - master
+        on:
+          branch: master
         script:
           - npx semantic-release
