@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/HelixW/dotfiles/compare/v1.2.0...v1.3.0) (2020-10-03)
+
+
+### Features
+
+* 🎸 Added .xinitrc and .xsession ([#11](https://github.com/HelixW/dotfiles/issues/11)) ([1eb67d3](https://github.com/HelixW/dotfiles/commit/1eb67d3ff3c58b548726ded898117e889ec4e19c)), closes [#10](https://github.com/HelixW/dotfiles/issues/10)
+
 # [1.2.0](https://github.com/HelixW/dotfiles/compare/v1.1.1...v1.2.0) (2020-10-03)
 
 
