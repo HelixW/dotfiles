@@ -30,3 +30,8 @@ home/helix/*
 # Xorg
 !home/helix/.xinitrc
 !home/helix/.xsession
+
+# Update Grub
+!bin
+bin/*
+!bin/update-grub
